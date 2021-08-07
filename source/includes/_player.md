@@ -188,7 +188,7 @@ city | The player's city |
 {}
 ```
 
-This endpoint delete a player.
+This endpoint deletes a player.
 
 <aside class="notice">
     You must be logged in as an administrator or as the player.
