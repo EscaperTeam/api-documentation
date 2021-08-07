@@ -323,19 +323,19 @@
             <a href="#player" class="toc-h1 toc-link" data-title="Player">Player</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#getplayers" class="toc-h2 toc-link" data-title="GetPlayers">GetPlayers</a>
+                    <a href="#get-players" class="toc-h2 toc-link" data-title="Get Players">Get Players</a>
                   </li>
                   <li>
-                    <a href="#createplayer" class="toc-h2 toc-link" data-title="CreatePlayer">CreatePlayer</a>
+                    <a href="#create-player" class="toc-h2 toc-link" data-title="Create Player">Create Player</a>
                   </li>
                   <li>
-                    <a href="#getplayer" class="toc-h2 toc-link" data-title="GetPlayer">GetPlayer</a>
+                    <a href="#get-player" class="toc-h2 toc-link" data-title="Get Player">Get Player</a>
                   </li>
                   <li>
-                    <a href="#updateplayer" class="toc-h2 toc-link" data-title="UpdatePlayer">UpdatePlayer</a>
+                    <a href="#update-player" class="toc-h2 toc-link" data-title="Update Player">Update Player</a>
                   </li>
                   <li>
-                    <a href="#deleteplayer" class="toc-h2 toc-link" data-title="DeletePlayer">DeletePlayer</a>
+                    <a href="#delete-player" class="toc-h2 toc-link" data-title="Delete Player">Delete Player</a>
                   </li>
               </ul>
           </li>
@@ -418,19 +418,19 @@
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@e.mail"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"password"</span><span class="p">:</span><span class="w"> </span><span class="s2">"password"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
 <p>Return <code>200 OK</code></p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"azecocapzie"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acencoaieno"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"at_expires"</span><span class="p">:</span><span class="w"> </span><span class="mi">1627048679</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"rt_expires"</span><span class="p">:</span><span class="w"> </span><span class="mi">1658498279</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_id"</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"azecocapzie"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acencoaieno"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"at_expires"</span><span class="p">:</span><span class="w"> </span><span class="mi">1627048679</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"rt_expires"</span><span class="p">:</span><span class="w"> </span><span class="mi">1658498279</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"role"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Player"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_id"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint login a player and returns his credentials.</p>
@@ -460,39 +460,35 @@
     All these endpoints should be call with a header containing `Authorization: Bearer {access_token}`.
     The `access_token` is given by the `/login` endpoint.
 </aside>
-<h2 id='getplayers'>GetPlayers</h2>
+<h2 id='get-players'>Get Players</h2>
 <blockquote>
 <p>Return <code>200 OK</code></p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_someid"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@e.mail"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"PlayerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"City"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"Verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T09:47:17.05153Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T09:47:17.05153Z"</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_1"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example1@e.mail"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"player_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_someotherid"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example2@e.mail"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"PlayerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"City"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"Verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T11:14:33.383204Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T11:14:33.383204Z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="nl">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example2@e.mail"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"player_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint get a list of all players.</p>
@@ -502,19 +498,19 @@
 </aside>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET {API_URL}/player</code></p>
-<h2 id='createplayer'>CreatePlayer</h2>
+<h2 id='create-player'>Create Player</h2>
 <blockquote>
 <p>Request body</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"example@e.mail"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"player_name"</span><span class="p">:</span><span class="s2">"player_name"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"first_name"</span><span class="p">:</span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"last_name"</span><span class="p">:</span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"example@e.mail"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"player_name"</span><span class="p">:</span><span class="s2">"player_name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"first_name"</span><span class="p">:</span><span class="s2">"first_name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"last_name"</span><span class="p">:</span><span class="s2">"last_name"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
@@ -563,25 +559,23 @@
 <td>x</td>
 </tr>
 </tbody></table>
-<h2 id='getplayer'>GetPlayer</h2>
+<h2 id='get-player'>Get Player</h2>
 <blockquote>
 <p>Return <code>200 OK</code></p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"ID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_someid"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"Email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example@e.mail"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"PlayerName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"City"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nl">"Verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"CreatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T09:47:17.05153Z"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"UpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-07-12T09:47:17.05153Z"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"player_1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example1@e.mail"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"player_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div>
 <p>This endpoint get a player.</p>
@@ -603,7 +597,7 @@
 <td>The id of the player to get</td>
 </tr>
 </tbody></table>
-<h2 id='updateplayer'>UpdatePlayer</h2>
+<h2 id='update-player'>Update Player</h2>
 <blockquote>
 <p>Request body</p>
 </blockquote>
@@ -670,13 +664,13 @@
 <td></td>
 </tr>
 </tbody></table>
-<h2 id='deleteplayer'>DeletePlayer</h2>
+<h2 id='delete-player'>Delete Player</h2>
 <blockquote>
 <p>Return <code>200 OK</code></p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint delete a player.</p>
+<p>This endpoint deletes a player.</p>
 
 <aside class="notice">
     You must be logged in as an administrator or as the player.
