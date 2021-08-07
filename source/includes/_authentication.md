@@ -48,7 +48,7 @@ city | The city of the user | x
 ```json
 {
   "email": "example@e.mail",
-  "password": "password",
+  "password": "password"
 }
 ```
 
@@ -56,12 +56,12 @@ city | The city of the user | x
 
 ```json
 {
-    "access_token": "azecocapzie",
-	"refresh_token": "acencoaieno",
-	"at_expires": 1627048679,
-	"rt_expires": 1658498279,
-	"role": "Player",
-	"id": "player_id"
+  "access_token": "azecocapzie", 
+  "refresh_token": "acencoaieno", 
+  "at_expires": 1627048679, 
+  "rt_expires": 1658498279, 
+  "role": "Player", 
+  "id": "player_id"
 }
 ```
 

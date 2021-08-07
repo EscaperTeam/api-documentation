@@ -6,40 +6,36 @@
 </aside>
 
 
-## GetPlayers
+## Get Players
 
 > Return `200 OK`
 
 ```json
 [
-    {
-        "ID": "player_someid",
-        "Email": "example@e.mail",
-        "PlayerName": "",
-        "FirstName": "",
-        "LastName": "",
-        "City": {
-            "latitude": 0,
-            "longitude": 0
-        },
-        "Verified": false,
-        "CreatedAt": "2021-07-12T09:47:17.05153Z",
-        "UpdatedAt": "2021-07-12T09:47:17.05153Z"
+  {
+    "id": "player_1", 
+    "email": "example1@e.mail",
+    "player_name": "",
+    "first_name": "",
+    "last_name": "",
+    "city": {
+      "latitude": 0,
+      "longitude": 0
     },
-    {
-        "ID": "player_someotherid",
-        "Email": "example2@e.mail",
-        "PlayerName": "",
-        "FirstName": "",
-        "LastName": "",
-        "City": {
-            "latitude": 0,
-            "longitude": 0
-        },
-        "Verified": false,
-        "CreatedAt": "2021-07-12T11:14:33.383204Z",
-        "UpdatedAt": "2021-07-12T11:14:33.383204Z"
-    }
+    "verified": true
+  },
+  {
+    "id": "player_2",
+    "email": "example2@e.mail",
+    "player_name": "",
+    "first_name": "",
+    "last_name": "",
+    "city": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "verified": false
+  }
 ]
 ```
 
@@ -54,20 +50,20 @@ This endpoint get a list of all players.
 `GET {API_URL}/player`
 
 
-## CreatePlayer
+## Create Player
 
 > Request body
 
 ```json
 {
-    "email":"example@e.mail",
-    "player_name":"player_name",
-    "first_name":"first_name",
-    "last_name":"last_name",
-    "city": {
-        "latitude": 0.0,
-        "longitude": 0.0
-    }
+  "email":"example@e.mail",
+  "player_name":"player_name",
+  "first_name":"first_name",
+  "last_name":"last_name",
+  "city": {
+    "latitude": 0.0,
+    "longitude": 0.0
+  }
 }
 ```
 
@@ -98,26 +94,24 @@ last_name | The player's last name | x
 city | The player's city | x
 
 
-## GetPlayer
+## Get Player
 
 > Return `200 OK`
 
 ```json
 [
-    {
-        "ID": "player_someid",
-        "Email": "example@e.mail",
-        "PlayerName": "",
-        "FirstName": "",
-        "LastName": "",
-        "City": {
-            "latitude": 0,
-            "longitude": 0
-        },
-        "Verified": false,
-        "CreatedAt": "2021-07-12T09:47:17.05153Z",
-        "UpdatedAt": "2021-07-12T09:47:17.05153Z"
-    }
+  {
+    "id": "player_1",
+    "email": "example1@e.mail",
+    "player_name": "",
+    "first_name": "",
+    "last_name": "",
+    "city": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "verified": true
+  }
 ]
 ```
 
@@ -138,7 +132,7 @@ Parameter | Description
 playerID | The id of the player to get
 
 
-## UpdatePlayer
+## Update Player
 
 > Request body
 
@@ -186,7 +180,7 @@ last_name | The player's last name |
 city | The player's city | 
 
 
-## DeletePlayer
+## Delete Player
 
 > Return `200 OK`
 
